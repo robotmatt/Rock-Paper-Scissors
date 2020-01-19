@@ -11,9 +11,12 @@ let gameID = "";
 
 $("#new-game").on("click", function(){
     // Create a new unique ID. 
+    gameID = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
     // Assign it in the database
     // Show the game ID on the page
     // reset the game
+    // clear the page
+    $("#game-display").html("");
 });
 
 $("#resume-game").on("click", function(){
