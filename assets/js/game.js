@@ -1,4 +1,5 @@
 // Game variable to hold wins and losses
+// This will be stored in the firebase DB as an object under the game key
 let game = {
     wins: 0,
     losses: 0,
@@ -13,7 +14,8 @@ let gameID = "";
 
 let timer;
 
-// Function: compare
+// Function: Compare
+//
 function compare(){
     if(game.playerSelection === game.opponenentSelection){
         return "tie";
